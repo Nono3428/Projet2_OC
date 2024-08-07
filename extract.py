@@ -134,8 +134,8 @@ def extract_url_books(url_category):
             current_page += 1
             url_category = tb.remove_end_of_url(url_category) + f'/page-{current_page}.html'
         
-        except requests.RequestException as e:
-            print(f"An error occurred: {e}")
+        except requests.RequestException:
+            print("Échec de la récupération de l'url.")
             break
     return (list_url_book)
 
@@ -182,15 +182,10 @@ Increments the count to move to the next category.
 """
 def iterate_category(list_category, list_title_category, input_data):
     count = 0
-    if input_data is not None:
-        input_index = int(input_data)
-    else:
-        input_index = None
     for category in list_category:
-        print('category en cour de scrap == ', list_title_category[count])
         list_url_book = extract_url_books(category)
         data_list = scrape_books_data(list_url_book, list_title_category[count])
         tr_data.transform_to_csv(list_title_category[count], data_list)
-        if input_index is not None and count == input_index:
+        if count == input_data:
             break
         count += 1
