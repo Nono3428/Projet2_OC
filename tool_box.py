@@ -3,6 +3,25 @@ from bs4 import BeautifulSoup
 import math
 import re
 
+"""
+Prompts the user to input the number of categories to retrieve.
+Returns the user's input if it is a valid integer within the allowed range.
+If the input is empty or exceeds the maximum allowed value, returns the default value of 50.
+"""
+
+def get_input_user():
+    while True:
+        input_data = input('Nombre de catégories a récupérer : ')
+        if not input_data:
+            return 50
+        try:
+            data = int(input_data)
+            if data > 50:
+                return 50
+            return int(input_data)
+        except ValueError:
+            print("Entrez un nombre entier ou appuyez sur 'Entrer'.")
+
 
 """
 Fetches and returns the HTML content from the given URL.   
@@ -56,9 +75,9 @@ def get_number_pages(url_category):
             nb_page /= 20
             return math.ceil(nb_page)
         else:
-            return 0
+            return 1
     except requests.RequestException:
-        return 0
+        return 1
 
 
 """
@@ -76,7 +95,7 @@ def flatten_list(false_list):
 
 """
 Cleans and formats a filename by replacing invalid characters with underscores and truncating it to a maximum length of 190 characters.
-Invalid characters include: < > : " / \ | ? *
+Invalid characters include: < > : " / \\ | ? *
 Multiple spaces are replaced with a single underscore.
 """
 def clean_filename(filename):
