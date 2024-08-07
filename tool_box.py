@@ -18,7 +18,7 @@ def get_input_user():
             data = int(input_data)
             if data > 50:
                 return 50
-            return int(input_data)
+            return data
         except ValueError:
             print("Entrez un nombre entier ou appuyez sur 'Entrer'.")
 

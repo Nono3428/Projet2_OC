@@ -10,30 +10,48 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
 
 # Étapes d'Installation 
 - Installez python grâce au lien :
+    ```
     https://www.python.org/downloads/
+    ```
     Cochez la case "Add Python(n°version) to Path" pour plus de facilité avec l'invite de commande
 - Ouvrez un terminal/invite de commande:
 - Créez votre environnement virtuel:
+    ```
     python -m venv "nom de l'environnement"
+    ```
 - Activez votre environnement virtuel:
-    Placez-vous dans le dossier de l'environnement 
+    Placez-vous dans le dossier de l'environnement
+        ```
         cd/"nom de l'environnement"/Script
+        ```
     Activez le avec la commande:
+        ```
         .\activate
+        ```
         Pour vérifier que votre environnement est bien activé, vérifiez si le nom de votre environnement apparaît entre parenthèses au début de la ligne de commande, 
         ou exécutez la commande suivante (si la liste est vide, vous êtes bien dans votre environnement) 
+        ```
         pip list
+        ```
     Revenez à la racine de votre dossier avec la commande :
+        ```
         cd../..
+        ```
 - Clonez le dépôt grâce à la commande :
+    ```
     git clone https://github.com/Nono3428/Projet2_OC.git
+    ```
 - Installez les dépendances pour le programme :
+    ```
     pip install -r requirements.txt
+    ```
 
 # Utilisation
 
 - Pour lancer le programme éxcuter la commande :
+    ```
     python .\main.py
+    ```
     Le programme vous demandera combien de catégories vous souhaitez récupérer (le programme les récupère les unes après les autres).
         Exemple : si vous souhaitez la catégorie "Art" qui correspond à la 25ème place, vous devrez attendre que le programme récupère les 24 catégories précédentes.
     Indiquez le nombre souhaité ou appuyez sur "Entrée" pour récupérer toutes les catégories du site.
@@ -47,6 +65,10 @@ Les données seront récupérées et stockées dans des fichiers appropriés. Un
 
 Une fois le programme terminé vous pouvez désactiver votre environnement virtuel :
     Placez-vous dans le dossier de l'environnement 
+        ```
         cd/"nom de l'environnement"/Script
+        ```
     Effectuez la commande suivante :
+        ```
         deactivate
+        ```
