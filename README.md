@@ -1,8 +1,9 @@
 # Programme d'Extraction des Prix
 
 ## Description
-Ce projet est un outil de web scraping conçu pour extraire et traiter des données provenant de librairies en ligne. 
-Il récupère des informations sur les livres, y compris les titres, les prix, les descriptions et les images, 
+Ce projet est un outil de web scraping conçu pour extraire et traiter des données provenant de librairies en ligne.
+
+Il récupère des informations sur les livres, y compris les titres, les prix, les descriptions et les images,
 et stocke les données dans un format structuré pour une analyse ultérieure.
 
 # Installation
@@ -14,6 +15,7 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
     https://www.python.org/
     ```
     Au minimum avoir une version python 3
+    
     Cochez la case "Add Python(n°version) to Path" pour plus de facilité avec l'invite de commande
 
 - Ouvrez un terminal/invite de commande:
@@ -59,21 +61,22 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
     python .\main.py
     ```
     Le programme vous demandera combien de catégories vous souhaitez récupérer (il les récupère les unes après les autres).
+
     Indiquez le nombre souhaité ou appuyez sur "Entrée" pour récupérer toutes les catégories du site.
 
 Les données seront récupérées et stockées dans des fichiers appropriés. 
 Un dossier 'Data' sera créé, contenant 2 sous-dossier :
 - Un dossier 'Fichier_csv' :
-    Dans ce dossier les données des livres de chaque catégories seront enregistrés sous forme de fichier 'csv', pour chaque catégories un fichier 'csv' sera crée avec le nom de celle-ci
+    - Dans ce dossier les données des livres de chaque catégories seront enregistrés sous forme de fichier 'csv', pour chaque catégories un fichier 'csv' sera crée avec le nom de celle-ci
 - Un dossier 'Image' :
     - Dans ce dossier les images des livres de chaque catégories seront enregistrés sous format 'jpg', pour chaque catégories un sous-dossier sera crée avec toutes les images des livres présent dans cette catégories.
 
 Une fois le programme terminé vous pouvez désactiver votre environnement virtuel :
-    Placez-vous dans le dossier de l'environnement 
+    - Placez-vous dans le dossier de l'environnement 
         ```
         cd/env/Script
         ```
-    Effectuez la commande suivante :
+    - Effectuez la commande suivante :
         ```
         deactivate
         ```
