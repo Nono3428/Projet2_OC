@@ -1,11 +1,11 @@
 # Programme d'Extraction des Prix
 
 ## Description
-Ce projet est un outil de web scraping conçu pour extraire et traiter des données provenant de librairies en ligne.
+Ce projet est un outil Python de web scraping conçu pour extraire et traiter des données provenant de librairies en ligne.
 
-Il récupère des informations sur les livres, y compris les titres, les prix, les descriptions et les images,
-et stocke les données dans un format structuré pour une analyse ultérieure.
+Ce programme automatise la collecte de données en ligne, facilitant la création de catalogues de livres et l'analyse des tendances du marché.
 
+Le projet vise à simplifier le processus de récupération des informations sur les livres, y compris les titres, descriptions, prix, et images.
 # Installation
 
 ## Prérequis
