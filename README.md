@@ -30,20 +30,20 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
     python -m venv "env"
     ```
 - Activez votre environnement virtuel:
-    Placez-vous dans le dossier de l'environnement
+    - Placez-vous dans le dossier de l'environnement
         ```
         cd/env/Script
         ```
-    Activez le avec la commande:
+    - Activez le avec la commande:
         ```
         .\activate
         ```
-        Pour vérifier que votre environnement est bien activé, vérifiez si le nom de votre environnement apparaît entre parenthèses au début de la ligne de commande, 
+        - Pour vérifier que votre environnement est bien activé, vérifiez si le nom de votre environnement apparaît entre parenthèses au début de la ligne de commande, 
         ou exécutez la commande suivante (si la liste est vide, vous êtes bien dans votre environnement) 
         ```
         pip list
         ```
-    Revenez à la racine de votre dossier avec la commande :
+    - Revenez à la racine de votre dossier avec la commande :
         ```
         cd../..
         ```
@@ -66,7 +66,7 @@ Un dossier 'Data' sera créé, contenant 2 sous-dossier :
 - Un dossier 'Fichier_csv' :
     Dans ce dossier les données des livres de chaque catégories seront enregistrés sous forme de fichier 'csv', pour chaque catégories un fichier 'csv' sera crée avec le nom de celle-ci
 - Un dossier 'Image' :
-    Dans ce dossier les images des livres de chaque catégories seront enregistrés sous format 'jpg', pour chaque catégories un sous-dossier sera crée avec toutes les images des livres présent dans cette catégories.
+    - Dans ce dossier les images des livres de chaque catégories seront enregistrés sous format 'jpg', pour chaque catégories un sous-dossier sera crée avec toutes les images des livres présent dans cette catégories.
 
 Une fois le programme terminé vous pouvez désactiver votre environnement virtuel :
     Placez-vous dans le dossier de l'environnement 
