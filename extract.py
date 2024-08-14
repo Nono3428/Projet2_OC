@@ -169,6 +169,7 @@ def scrape_books_data(list_book, title_category):
         row = tb.flatten_list(row)
         data_list.append(row)
         tr_data.download_image(image_url, title_category, title)
+        print("livre en cour de scrap : ", title)
     return(data_list)
 
 
@@ -183,9 +184,10 @@ Increments the count to move to the next category.
 def iterate_category(list_category, list_title_category, input_data):
     count = 0
     for category in list_category:
+        print('category en cour de scrap == ', list_title_category[count])
         list_url_book = extract_url_books(category)
         data_list = scrape_books_data(list_url_book, list_title_category[count])
         tr_data.transform_to_csv(list_title_category[count], data_list)
-        if count == input_data:
+        if count == input_data - 1:
             break
         count += 1

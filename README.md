@@ -11,18 +11,28 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
 # Étapes d'Installation 
 - Installez python grâce au lien :
     ```
-    https://www.python.org/downloads/
+    https://www.python.org/
     ```
+    Au minimum avoir une version python 3
     Cochez la case "Add Python(n°version) to Path" pour plus de facilité avec l'invite de commande
+
 - Ouvrez un terminal/invite de commande:
+- Clonez le repo grâce à la commande :
+    ```
+    git clone https://github.com/Nono3428/Projet2_OC.git
+    ```
+    Placez-vous dans le dossier
+    ```
+    cd/Projet2_OC
+    ```
 - Créez votre environnement virtuel:
     ```
-    python -m venv "nom de l'environnement"
+    python -m venv "env"
     ```
 - Activez votre environnement virtuel:
     Placez-vous dans le dossier de l'environnement
         ```
-        cd/"nom de l'environnement"/Script
+        cd/env/Script
         ```
     Activez le avec la commande:
         ```
@@ -37,10 +47,6 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
         ```
         cd../..
         ```
-- Clonez le dépôt grâce à la commande :
-    ```
-    git clone https://github.com/Nono3428/Projet2_OC.git
-    ```
 - Installez les dépendances pour le programme :
     ```
     pip install -r requirements.txt
@@ -52,21 +58,20 @@ Pour une meilleure pratique, toutes les installations se feront dans un environn
     ```
     python .\main.py
     ```
-    Le programme vous demandera combien de catégories vous souhaitez récupérer (le programme les récupère les unes après les autres).
-        Exemple : si vous souhaitez la catégorie "Art" qui correspond à la 25ème place, vous devrez attendre que le programme récupère les 24 catégories précédentes.
+    Le programme vous demandera combien de catégories vous souhaitez récupérer (il les récupère les unes après les autres).
     Indiquez le nombre souhaité ou appuyez sur "Entrée" pour récupérer toutes les catégories du site.
-        Je précise que si vous voulez récupérer les 10 premières catégories, vous devez indiquer le chiffre 9 (car le programme commence à 0).
 
-Les données seront récupérées et stockées dans des fichiers appropriés. Un dossier 'Data' sera créé, contenant :
+Les données seront récupérées et stockées dans des fichiers appropriés. 
+Un dossier 'Data' sera créé, contenant 2 sous-dossier :
 - Un dossier 'Fichier_csv' :
-    A l'intérieur, toutes les données de chaque livre pour chaque catégorie seront stockées dans des fichiers 'csv'. Chaque catégorie aura son propre fichier 'csv'.
+    Dans ce dossier les données des livres de chaque catégories seront enregistrés sous forme de fichier 'csv', pour chaque catégories un fichier 'csv' sera crée avec le nom de celle-ci
 - Un dossier 'Image' :
-    A l'intérieur, vous trouverez les images de chaque livre pour chaque catégorie. Comme pour les fichiers 'csv', chaque catégorie aura son propre dossier contenant les photos de chaque livre.
+    Dans ce dossier les images des livres de chaque catégories seront enregistrés sous format 'jpg', pour chaque catégories un sous-dossier sera crée avec toutes les images des livres présent dans cette catégories.
 
 Une fois le programme terminé vous pouvez désactiver votre environnement virtuel :
     Placez-vous dans le dossier de l'environnement 
         ```
-        cd/"nom de l'environnement"/Script
+        cd/env/Script
         ```
     Effectuez la commande suivante :
         ```

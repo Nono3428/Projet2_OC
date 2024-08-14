@@ -1,6 +1,3 @@
-import requests
-import csv
-from bs4 import BeautifulSoup
 import extract 
 import tool_box as tb
 

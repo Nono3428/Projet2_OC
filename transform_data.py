@@ -46,5 +46,5 @@ def download_image(url, title_category, title_book):
         with open(path_file, 'wb') as my_file:
             my_file.write(response.content)
         count += 1
-    except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException:
         print(f"Échec du téléchargement de l'image depuis {url}")

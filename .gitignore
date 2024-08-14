@@ -1,8 +1,6 @@
 #Dossier python
-_pycache_/
+_pycache_
 #Environement virtuel
 env
 #Dossier du projet
 Data
-
-
