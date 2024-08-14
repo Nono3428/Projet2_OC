@@ -27,7 +27,7 @@ https://git-scm.com/
     ```
     Placez-vous dans le dossier
     ```
-    cd/Projet2_OC
+    cd .\Projet2_OC
     ```
 - Créez votre environnement virtuel:
     ```
@@ -36,7 +36,7 @@ https://git-scm.com/
 - Activez votre environnement virtuel:
     - Placez-vous dans le dossier de l'environnement
         ```
-        cd/env/Script
+        cd .\env\Scripts
         ```
     - Activez le avec la commande:
         ```
@@ -49,11 +49,11 @@ https://git-scm.com/
         ```
     - Revenez à la racine de votre dossier avec la commande :
         ```
-        cd../..
+        cd ../..
         ```
 - Installez les dépendances pour le programme :
     ```
-    pip install -r requirements.txt
+    pip install -r .\requirements.txt
     ```
 
 # Utilisation
@@ -77,7 +77,7 @@ Un dossier 'Data' sera créé, contenant 2 sous-dossier :
 Une fois le programme terminé vous pouvez désactiver votre environnement virtuel :
 - Placez-vous dans le dossier de l'environnement 
     ```
-    cd/env/Script
+    cd .\env\Scripts
     ```
 - Effectuez la commande suivante :
     ```
