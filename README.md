@@ -6,6 +6,8 @@ Ce projet est un outil Python de web scraping conçu pour extraire et traiter de
 Ce programme automatise la collecte de données en ligne, facilitant la création de catalogues de livres et l'analyse des tendances du marché.
 
 Le projet vise à simplifier le processus de récupération des informations sur les livres, y compris les titres, descriptions, prix, et images.
+
+Le programme utilise une url de base du site web, il est aussi spécifique à ce site web (Book to scrape), pour utiliser le programme pour un autre site web il faudra effectuer une mise à jour pour lui permettre de pouvoir récuperer les informations nécessaire.
 # Installation
 
 ## Prérequis
