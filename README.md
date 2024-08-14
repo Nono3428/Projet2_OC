@@ -7,17 +7,19 @@ Il récupère des informations sur les livres, y compris les titres, les prix, l
 et stocke les données dans un format structuré pour une analyse ultérieure.
 
 # Installation
-Pour une meilleure pratique, toutes les installations se feront dans un environnement virtuel.
 
-# Étapes d'Installation 
-- Installez python grâce au lien :
-    ```
-    https://www.python.org/
-    ```
-    Au minimum avoir une version python 3
+## Prérequis
+- Python 3.x
 
-    Cochez la case "Add Python(n°version) to Path" pour plus de facilité avec l'invite de commande
-
+Lors de l'instalation cochez la case "Add Python(n°version) to Path" pour plus de facilité avec l'invite de commande
+```
+https://www.python.org/
+```
+- Git  
+```
+https://git-scm.com/
+```
+## Étapes d'Installation 
 - Ouvrez un terminal/invite de commande:
 - Clonez le repo grâce à la commande :
     ```
