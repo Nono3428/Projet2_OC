@@ -98,8 +98,7 @@ def extract_url_category(html, base_url):
         category_url = parser.find("ul", class_="nav nav-list").find('ul').find_all('a')
         for index in category_url:
             container_url = index.get('href')
-            container_title = index.text
-            list_test = ' '.join(container_title.split())
+            list_test = ' '.join(index.text.split())
             list_title_category.append(list_test)
             list_url_category.append(base_url + container_url)
         return (list_url_category, list_title_category)
