@@ -1,5 +1,4 @@
 import requests
-import csv
 from bs4 import BeautifulSoup
 import re
 import transform_data as tr_data
@@ -66,7 +65,8 @@ def extract_product_description(html):
         parser = BeautifulSoup(html, "html.parser")
         desc = parser.find("p", class_=None)
         if desc:
-            return(desc.text)
+            cleaned_desc = re.sub(r'[^\x20-\x7E]+', '', desc.text)
+            return(cleaned_desc)
         else:
             return None
 
@@ -119,8 +119,7 @@ def extract_url_books(url_category):
     list_url_book = []
     current_page = 1
     nb_page = tb.get_number_pages(url_category)
-    if nb_page == 0:
-        nb_page = 1
+    print("Récupération des URLs des livres")
     while current_page <= nb_page:
         try:
             reponse = requests.get(url_category)
@@ -168,8 +167,9 @@ def scrape_books_data(list_book, title_category):
         row.append(image_url)
         row = tb.flatten_list(row)
         data_list.append(row)
+        print("Téléchargement de l'image : ", title)
         tr_data.download_image(image_url, title_category, title)
-        print("livre en cour de scrap : ", title)
+        print("Livre en cour de scrap    : ", title)
     return(data_list)
 
 
@@ -184,7 +184,7 @@ Increments the count to move to the next category.
 def iterate_category(list_category, list_title_category, input_data):
     count = 0
     for category in list_category:
-        print('category en cour de scrap == ', list_title_category[count])
+        print('Catégorie en cour de scrap == ', list_title_category[count])
         list_url_book = extract_url_books(category)
         data_list = scrape_books_data(list_url_book, list_title_category[count])
         tr_data.transform_to_csv(list_title_category[count], data_list)
